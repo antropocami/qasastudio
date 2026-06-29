@@ -1584,7 +1584,15 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contactar por WhatsApp"
-        >Hablemos →</a>
+         data-i18n="nav_cta">Hablemos →</a>
+        <button
+          id="lang-toggle"
+          onclick="toggleLang()"
+          aria-label="Cambiar idioma"
+          style="background:none; border:1px solid rgba(168,255,62,0.3); color:var(--lime); font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.08em; padding:6px 12px; border-radius:3px; cursor:pointer; transition:background 0.2s; margin-right:8px;"
+          onmouseenter="this.style.background='rgba(168,255,62,0.1)'"
+          onmouseleave="this.style.background='none'"
+        >ES</button>
         <button
           class="hamburger"
           aria-label="Abrir menú"
@@ -1596,10 +1604,10 @@
         </button>
       </div>
       <div id="mobile-menu" role="navigation" aria-label="Menú mobile">
-        <a href="#servicios" onclick="closeMenu()">Servicios</a>
-        <a href="#proceso" onclick="closeMenu()">Proceso</a>
-        <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
-        <a href="#precios" onclick="closeMenu()">Precios</a>
+        <a href="#servicios" onclick="closeMenu()" data-i18n="nav_servicios">Servicios</a>
+        <a href="#proceso" onclick="closeMenu()" data-i18n="nav_proceso">Proceso</a>
+        <a href="#nosotros" onclick="closeMenu()" data-i18n="nav_nosotros">Nosotros</a>
+        <a href="#precios" onclick="closeMenu()" data-i18n="nav_precios">Precios</a>
         <a href="#faq" onclick="closeMenu()">FAQ</a>
         <a
           href="https://wa.me/541165796453?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20web"
@@ -1626,12 +1634,12 @@
         <div class="hero-layout">
           <!-- Left: copy -->
           <div>
-            <p class="hero-kicker">Qasa.studio</p>
+            <p class="hero-kicker" data-i18n="hero_kicker">Qasa.studio</p>
             <h1 class="hero-h1" id="hero-title">
-              Hacemos tu<br>página web.
+              <span data-i18n="hero_h1">Hacemos tu<br>página web.</span>
             </h1>
             <p class="hero-sub">
-              Contanos qué hace tu negocio. Nosotros nos encargamos de todo lo demás.
+              <span data-i18n="hero_sub">Contanos qué hace tu negocio. Nosotros nos encargamos de todo lo demás.</span>
             </p>
             <div class="hero-actions">
               <a
@@ -1639,23 +1647,23 @@
                 class="btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
-              >Escribinos</a>
-              <a href="#servicios" class="btn-ghost">Ver servicios</a>
+               data-i18n="hero_cta">Escribinos</a>
+              <a href="#servicios" class="btn-ghost" data-i18n="hero_ghost">Ver servicios</a>
             </div>
             <div class="hero-stats" aria-label="Números clave">
               <div class="stat">
                 <span class="stat-num">7<span>d</span></span>
-                <span class="stat-label">Entrega garantizada</span>
+                <span class="stat-label" data-i18n="stat_entrega">Entrega garantizada</span>
               </div>
               <div class="stat-sep" aria-hidden="true"></div>
               <div class="stat">
                 <span class="stat-num">+<span>50</span></span>
-                <span class="stat-label">PyMEs lanzadas</span>
+                <span class="stat-label" data-i18n="stat_pymes">PyMEs lanzadas</span>
               </div>
               <div class="stat-sep" aria-hidden="true"></div>
               <div class="stat">
                 <span class="stat-num">10<span>+</span></span>
-                <span class="stat-label">Años de industria</span>
+                <span class="stat-label" data-i18n="stat_anos">Años de industria</span>
               </div>
             </div>
           </div>
@@ -1727,51 +1735,51 @@
     <!-- SERVICIOS -->
     <section id="servicios" aria-labelledby="servicios-title">
       <div class="container">
-        <p class="section-label">01 — Servicios</p>
-        <h2 class="section-title" id="servicios-title">¿Qué podemos hacer por tu negocio?</h2>
+        <p class="section-label" data-i18n="sec_servicios_label">01 — Servicios</p>
+        <h2 class="section-title" id="servicios-title" data-i18n="sec_servicios_title">¿Qué podemos hacer por tu negocio?</h2>
         <p class="section-body"></p>
 
         <div class="services-grid">
           <!-- Landing page -->
           <article class="service-card reveal" aria-labelledby="svc-1">
             <p class="service-num">// 01</p>
-            <h3 class="service-name" id="svc-1">Landing page</h3>
-            <p class="service-desc">Una página con un solo objetivo: que te contacten, que compren, que reserven. Ideal para empezar.</p>
+            <h3 class="service-name" id="svc-1" data-i18n="svc1_name">Landing page</h3>
+            <p class="service-desc"><span data-i18n="svc1_desc">Una página con un solo objetivo: que te contacten, que compren, que reserven. Ideal para empezar.</span></p>
             <ul class="service-list" aria-label="Incluye">
               <li>Diseño a medida</li>
               <li>Optimizada para celular</li>
               <li>Formulario + WhatsApp</li>
               <li>Entrega en 7 días</li>
             </ul>
-            <p class="service-price">desde US$ 290</p>
+            <p class="service-price" data-i18n="svc1_price">desde US$ 290</p>
           </article>
 
           <!-- Sitio web -->
           <article class="service-card dark reveal" style="transition-delay:0.1s" aria-labelledby="svc-2">
             <p class="service-num">// 02</p>
-            <h3 class="service-name" id="svc-2">Sitio web completo</h3>
-            <p class="service-desc">Tu negocio completo en internet. Quiénes son, qué hacen, cómo contratarlos.</p>
+            <h3 class="service-name" id="svc-2" data-i18n="svc2_name">Sitio web completo</h3>
+            <p class="service-desc"><span data-i18n="svc2_desc">Tu negocio completo en internet. Quiénes son, qué hacen, cómo contratarlos.</span></p>
             <ul class="service-list" aria-label="Incluye">
               <li>Hasta 6 secciones / páginas</li>
               <li>SEO básico incluido</li>
               <li>Blog o portfolio opcional</li>
               <li>Velocidad optimizada</li>
             </ul>
-            <p class="service-price">desde US$ 590</p>
+            <p class="service-price" data-i18n="svc2_price">desde US$ 590</p>
           </article>
 
           <!-- E-commerce -->
           <article class="service-card reveal" style="transition-delay:0.2s" aria-labelledby="svc-3">
             <p class="service-num">// 03</p>
-            <h3 class="service-name" id="svc-3">E-commerce</h3>
-            <p class="service-desc">Vendé tus productos las 24 horas. Nosotros configuramos todo para que solo tengas que subir lo que vendés.</p>
+            <h3 class="service-name" id="svc-3" data-i18n="svc3_name">E-commerce</h3>
+            <p class="service-desc"><span data-i18n="svc3_desc">Vendé tus productos las 24 horas. Nosotros configuramos todo para que solo tengas que subir lo que vendés.</span></p>
             <ul class="service-list" aria-label="Incluye">
               <li>Catálogo de productos</li>
               <li>Integración de pagos (MP / Stripe)</li>
               <li>Panel de administración</li>
               <li>Capacitación incluida</li>
             </ul>
-            <p class="service-price">desde US$ 990</p>
+            <p class="service-price" data-i18n="svc3_price">desde US$ 990</p>
           </article>
         </div>
       </div>
@@ -1780,33 +1788,33 @@
     <!-- PROCESO -->
     <section id="proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <p class="section-label">02 — Proceso</p>
-        <h2 class="section-title" id="proceso-title">Trabajamos para vos</h2>
+        <p class="section-label" data-i18n="sec_proceso_label">02 — Proceso</p>
+        <h2 class="section-title" id="proceso-title" data-i18n="sec_proceso_title">Trabajamos para vos</h2>
         <p class="section-body"></p>
       </div>
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="step-num" aria-hidden="true">01</div>
-          <h3 class="step-title">Nos contás</h3>
-          <p class="step-desc">Qué hace tu negocio, qué necesitás, qué te gusta y qué no. Sin formularios raros ni reuniones eternas.</p>
+          <h3 class="step-title" data-i18n="step1_title">Nos contás</h3>
+          <p class="step-desc"><span data-i18n="step1_desc">Qué hace tu negocio, qué necesitás, qué te gusta y qué no. Sin formularios raros ni reuniones eternas.</span></p>
           <p class="step-tag">// Día 1</p>
         </div>
         <div class="process-step">
           <div class="step-num" aria-hidden="true">02</div>
-          <h3 class="step-title">Te mostramos cómo va a quedar</h3>
-          <p class="step-desc">Antes de hacer cualquier cosa, te mandamos un boceto. Si algo no te gusta, lo cambiamos.</p>
+          <h3 class="step-title" data-i18n="step2_title">Te mostramos cómo va a quedar</h3>
+          <p class="step-desc"><span data-i18n="step2_desc">Antes de hacer cualquier cosa, te mandamos un boceto. Si algo no te gusta, lo cambiamos.</span></p>
           <p class="step-tag">// Días 2–3</p>
         </div>
         <div class="process-step">
           <div class="step-num" aria-hidden="true">03</div>
-          <h3 class="step-title">Lo construimos</h3>
-          <p class="step-desc">Nos encargamos del diseño, el código y que ande bien en el celular.</p>
+          <h3 class="step-title" data-i18n="step3_title">Lo construimos</h3>
+          <p class="step-desc"><span data-i18n="step3_desc">Nos encargamos del diseño, el código y que ande bien en el celular.</span></p>
           <p class="step-tag">// Días 4–6</p>
         </div>
         <div class="process-step">
           <div class="step-num" aria-hidden="true">04</div>
-          <h3 class="step-title">Lo publicamos juntos</h3>
-          <p class="step-desc">Te explicamos cómo funciona todo y quedamos disponibles por cualquier duda.</p>
+          <h3 class="step-title" data-i18n="step4_title">Lo publicamos juntos</h3>
+          <p class="step-desc"><span data-i18n="step4_desc">Te explicamos cómo funciona todo y quedamos disponibles por cualquier duda.</span></p>
           <p class="step-tag">// Día 7</p>
         </div>
       </div>
@@ -1818,11 +1826,11 @@
       <div class="container">
         <div class="nosotros-inner">
           <div class="nosotros-copy reveal">
-            <p class="section-label">03 — Nosotros</p>
-            <h2 class="section-title" id="nosotros-title">Tu web en manos de alguien que sabe lo que hace.</h2>
-            <p class="section-body">Tenemos años de experiencia trabajando en proyectos de tecnología a gran escala. Sabemos lo que funciona y lo que no.</p>
+            <p class="section-label" data-i18n="sec_nosotros_label">03 — Nosotros</p>
+            <h2 class="section-title" id="nosotros-title" data-i18n="sec_nosotros_title">Tu web en manos de alguien que sabe lo que hace.</h2>
+            <p class="section-body"><span data-i18n="sec_nosotros_body">Tenemos años de experiencia trabajando en proyectos de tecnología a gran escala. Sabemos lo que funciona y lo que no.</span></p>
             <div class="nosotros-highlight">
-              <p>Cuando nos contratás, sabés que del otro lado hay alguien que ya hizo esto muchas veces.</p>
+              <p><span data-i18n="sec_nosotros_highlight">Cuando nos contratás, sabés que del otro lado hay alguien que ya hizo esto muchas veces.</span></p>
             </div>
           </div>
           <div class="logos-grid reveal" style="transition-delay:0.15s" aria-label="Empresas de origen">
@@ -1841,16 +1849,16 @@
           </div>
           <div class="nosotros-manifesto reveal">
             <div class="manifesto-item">
-              <p class="manifesto-item-title">// Experiencia</p>
-              <p class="manifesto-item-body">Trabajamos en proyectos de tecnología de gran escala durante años. Ese conocimiento está en cada web que hacemos.</p>
+              <p class="manifesto-item-title" data-i18n="man1_title">// Experiencia</p>
+              <p class="manifesto-item-body"><span data-i18n="man1_body">Trabajamos en proyectos de tecnología de gran escala durante años. Ese conocimiento está en cada web que hacemos.</span></p>
             </div>
             <div class="manifesto-item">
-              <p class="manifesto-item-title">// Claridad</p>
-              <p class="manifesto-item-body">Te explicamos todo en lenguaje simple. Nunca vas a sentir que no entendés de qué te estamos hablando.</p>
+              <p class="manifesto-item-title" data-i18n="man2_title">// Claridad</p>
+              <p class="manifesto-item-body"><span data-i18n="man2_body">Te explicamos todo en lenguaje simple. Nunca vas a sentir que no entendés de qué te estamos hablando.</span></p>
             </div>
             <div class="manifesto-item">
-              <p class="manifesto-item-title">// Compromiso</p>
-              <p class="manifesto-item-body">Estamos disponibles durante todo el proceso y después del lanzamiento. No desaparecemos cuando terminamos.</p>
+              <p class="manifesto-item-title" data-i18n="man3_title">// Compromiso</p>
+              <p class="manifesto-item-body"><span data-i18n="man3_body">Estamos disponibles durante todo el proceso y después del lanzamiento. No desaparecemos cuando terminamos.</span></p>
             </div>
           </div>
         </div>
@@ -1860,8 +1868,8 @@
     <!-- RESULTADOS -->
     <section id="resultados" aria-labelledby="resultados-title">
       <div class="container">
-        <p class="section-label">04 — Resultados</p>
-        <h2 class="section-title" id="resultados-title">Webs que funcionan de verdad</h2>
+        <p class="section-label" data-i18n="sec_resultados_label">04 — Resultados</p>
+        <h2 class="section-title" id="resultados-title" data-i18n="sec_resultados_title">Webs que funcionan de verdad</h2>
         <p class="section-body"></p>
         <div class="results-grid">
           <article class="result-card reveal">
@@ -1870,8 +1878,8 @@
               <span class="result-after">// DESPUÉS</span>
             </div>
             <div class="result-body">
-              <h3 class="result-title">+180% consultas</h3>
-              <p class="result-detail">Marina tenía una web que nadie encontraba. En 30 días de lanzada la nueva, triplicó las consultas por WhatsApp.</p>
+              <h3 class="result-title" data-i18n="res1_title">+180% consultas</h3>
+              <p class="result-detail"><span data-i18n="res1_detail">Marina tenía una web que nadie encontraba. En 30 días de lanzada la nueva, triplicó las consultas por WhatsApp.</span></p>
             </div>
           </article>
           <article class="result-card reveal" style="transition-delay:0.1s">
@@ -1880,8 +1888,8 @@
               <span class="result-after">// DESPUÉS</span>
             </div>
             <div class="result-body dark">
-              <h3 class="result-title white">3x ventas</h3>
-              <p class="result-detail grey">Rodrigo vendía por Instagram. Cuando tuvo su tienda online, sus ventas se multiplicaron en dos meses.</p>
+              <h3 class="result-title white" data-i18n="res2_title">3x ventas</h3>
+              <p class="result-detail grey"><span data-i18n="res2_detail">Rodrigo vendía por Instagram. Cuando tuvo su tienda online, sus ventas se multiplicaron en dos meses.</span></p>
             </div>
           </article>
           <article class="result-card reveal" style="transition-delay:0.2s">
@@ -1890,8 +1898,8 @@
               <span style="font-family:'Space Mono',monospace; font-size:11px; color:var(--ink-mid);">// VELOCIDAD</span>
             </div>
             <div class="result-body">
-              <h3 class="result-title">0.4 segundos</h3>
-              <p class="result-detail">El tiempo que tarda en cargar una web nuestra. La mayoría de las webs tarda 8 veces más.</p>
+              <h3 class="result-title" data-i18n="res3_title">0.4 segundos</h3>
+              <p class="result-detail"><span data-i18n="res3_detail">El tiempo que tarda en cargar una web nuestra. La mayoría de las webs tarda 8 veces más.</span></p>
             </div>
           </article>
         </div>
@@ -1901,12 +1909,12 @@
     <!-- TESTIMONIOS -->
     <section id="testimonios" aria-labelledby="testimonios-title">
       <div class="container">
-        <p class="section-label">05 — Testimonios</p>
-        <h2 class="section-title" id="testimonios-title">Lo que dicen</h2>
+        <p class="section-label" data-i18n="sec_testi_label">05 — Testimonios</p>
+        <h2 class="section-title" id="testimonios-title" data-i18n="sec_testi_title">Lo que dicen</h2>
         <div class="testimonials-grid">
           <article class="testimonial-card reveal" aria-labelledby="t1-author">
             <div class="quote-mark" aria-hidden="true">"</div>
-            <p class="testimonial-text">"Me gustó muchísimo el diseño y principalmente que atendieron todas mis dudas. Yo no sé nada de esto y nunca me sentí perdida."</p>
+            <p class="testimonial-text"><span data-i18n="testi1">"Me gustó muchísimo el diseño y principalmente que atendieron todas mis dudas. Yo no sé nada de esto y nunca me sentí perdida."</span></p>
             <div class="testimonial-author">
               <div class="author-avatar" aria-hidden="true">M</div>
               <div>
@@ -1917,7 +1925,7 @@
           </article>
           <article class="testimonial-card dark reveal" style="transition-delay:0.1s" aria-labelledby="t2-author">
             <div class="quote-mark lime" aria-hidden="true">"</div>
-            <p class="testimonial-text white">"Pensé que iba a tardar meses y fue todo lo contrario. En dos semanas ya estaba vendiendo online."</p>
+            <p class="testimonial-text white"><span data-i18n="testi2">"Pensé que iba a tardar meses y fue todo lo contrario. En dos semanas ya estaba vendiendo online."</span></p>
             <div class="testimonial-author">
               <div class="author-avatar violet" aria-hidden="true">R</div>
               <div>
@@ -1928,7 +1936,7 @@
           </article>
           <article class="testimonial-card reveal" style="transition-delay:0.2s" aria-labelledby="t3-author">
             <div class="quote-mark" aria-hidden="true">"</div>
-            <p class="testimonial-text">"Nunca me hablaron en idioma técnico. Les decía lo que quería y lo hacían."</p>
+            <p class="testimonial-text"><span data-i18n="testi3">"Nunca me hablaron en idioma técnico. Les decía lo que quería y lo hacían."</span></p>
             <div class="testimonial-author">
               <div class="author-avatar" aria-hidden="true">V</div>
               <div>
@@ -1944,19 +1952,19 @@
     <!-- PRECIOS -->
     <section id="precios" aria-labelledby="precios-title">
       <div class="container">
-        <p class="section-label">06 — Precios</p>
-        <h2 class="section-title" id="precios-title">¿Cuánto cuesta?</h2>
-        <p class="section-body">Precio fijo desde el primer mensaje.</p>
+        <p class="section-label" data-i18n="sec_precios_label">06 — Precios</p>
+        <h2 class="section-title" id="precios-title" data-i18n="sec_precios_title">¿Cuánto cuesta?</h2>
+        <p class="section-body" data-i18n="sec_precios_body">Precio fijo desde el primer mensaje.</p>
         <div class="pricing-grid">
 
           <!-- Starter -->
           <article class="price-card reveal" aria-labelledby="plan-1">
             <div class="price-head">
-              <p class="price-plan">// LANDING</p>
+              <p class="price-plan" data-i18n="plan1_label">//  LANDING</p>
               <div class="price-amount">
                 <small>US$</small>290
               </div>
-              <p class="price-desc">Una página lista para recibir clientes.</p>
+              <p class="price-desc" data-i18n="plan1_desc">Una página lista para recibir clientes.</p>
             </div>
             <div class="price-features">
               <div class="feat"><div class="feat-icon" aria-hidden="true">✓</div>Diseño a medida (1 página)</div>
@@ -1978,12 +1986,12 @@
           <!-- Pro -->
           <article class="price-card reveal" style="transition-delay:0.1s" aria-labelledby="plan-2">
             <div class="price-head violet">
-              <span class="price-badge">MÁS POPULAR</span>
-              <p class="price-plan lime">// SITIO WEB</p>
+              <span class="price-badge" data-i18n="badge_popular">MÁS POPULAR</span>
+              <p class="price-plan lime" data-i18n="plan2_label">// SITIO WEB</p>
               <div class="price-amount white">
                 <small>US$</small>590
               </div>
-              <p class="price-desc inv">Tu negocio completo en internet.</p>
+              <p class="price-desc inv" data-i18n="plan2_desc">Tu negocio completo en internet.</p>
             </div>
             <div class="price-features ink">
               <div class="feat white"><div class="feat-icon" aria-hidden="true">✓</div>Hasta 6 secciones / páginas</div>
@@ -2006,11 +2014,11 @@
           <!-- E-commerce -->
           <article class="price-card reveal" style="transition-delay:0.2s" aria-labelledby="plan-3">
             <div class="price-head">
-              <p class="price-plan">// E-COMMERCE</p>
+              <p class="price-plan" data-i18n="plan3_label">// E-COMMERCE</p>
               <div class="price-amount">
                 <small>US$</small>990
               </div>
-              <p class="price-desc">Vendé tus productos las 24 horas.</p>
+              <p class="price-desc" data-i18n="plan3_desc">Vendé tus productos las 24 horas.</p>
             </div>
             <div class="price-features">
               <div class="feat"><div class="feat-icon" aria-hidden="true">✓</div>Catálogo ilimitado de productos</div>
@@ -2037,57 +2045,57 @@
     <!-- FAQ -->
     <section id="faq" aria-labelledby="faq-title">
       <div class="container">
-        <p class="section-label">07 — FAQ</p>
-        <h2 class="section-title" id="faq-title">Preguntas frecuentes</h2>
+        <p class="section-label" data-i18n="sec_faq_label">07 — FAQ</p>
+        <h2 class="section-title" id="faq-title" data-i18n="sec_faq_title">Preguntas frecuentes</h2>
         <div class="faq-list" role="list">
 
           <div class="faq-item" role="listitem">
             <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="faq-q-text">¿Cuánto tarda?</span>
+              <span class="faq-q-text" data-i18n="faq_q1">¿Cuánto tarda?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" role="region">
-              <p>Depende del proyecto. Una landing page la entregamos en 7 días. Un sitio web completo en unos 10. Una tienda online en 15.</p>
+              <p data-i18n="faq_a1">Depende del proyecto. Una landing page la entregamos en 7 días. Un sitio web completo en unos 10. Una tienda online en 15.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="faq-q-text">¿Necesito saber algo de tecnología?</span>
+              <span class="faq-q-text" data-i18n="faq_q2">¿Necesito saber algo de tecnología?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" role="region">
-              <p>No. Nos contás qué necesitás y nosotros nos encargamos de todo.</p>
+              <p data-i18n="faq_a2">No. Nos contás qué necesitás y nosotros nos encargamos de todo.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="faq-q-text">¿Qué pasa si no me gusta cómo quedó?</span>
+              <span class="faq-q-text" data-i18n="faq_q3">¿Qué pasa si no me gusta cómo quedó?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" role="region">
-              <p>Antes de arrancar te mostramos cómo va a quedar. Si algo no te convence, lo cambiamos.</p>
+              <p data-i18n="faq_a3">Antes de arrancar te mostramos cómo va a quedar. Si algo no te convence, lo cambiamos.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="faq-q-text">¿Trabajan solo en Argentina?</span>
+              <span class="faq-q-text" data-i18n="faq_q5">¿Trabajan solo en Argentina?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" role="region">
-              <p>No, trabajamos con clientes de cualquier país. Todo es remoto.</p>
+              <p data-i18n="faq_a5">No, trabajamos con clientes de cualquier país. Todo es remoto.</p>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
             <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="faq-q-text">¿Cómo es el pago?</span>
+              <span class="faq-q-text" data-i18n="faq_q4">¿Cómo es el pago?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" role="region">
-              <p>La mitad al empezar, la otra mitad cuando entregamos.</p>
+              <p data-i18n="faq_a4">La mitad al empezar, la otra mitad cuando entregamos.</p>
             </div>
           </div>
 
@@ -2178,8 +2186,8 @@
       <div class="cta-band-aura" aria-hidden="true"></div>
       <div class="cta-band-inner">
         <div class="cta-band-copy reveal">
-          <h2 id="cta-title">¿Arrancamos?</h2>
-          <p>Contanos qué necesitás y te respondemos el mismo día.</p>
+          <h2 id="cta-title" data-i18n="cta_title">¿Arrancamos?</h2>
+          <p><span data-i18n="cta_sub">Contanos qué necesitás y te respondemos el mismo día.</span></p>
         </div>
         <div class="cta-band-actions reveal" style="transition-delay:0.15s">
           <a
@@ -2194,7 +2202,7 @@
             </svg>
             Escribinos por WhatsApp
           </a>
-          <p class="cta-note">// Respuesta en menos de 24hs</p>
+          <p class="cta-note" data-i18n="cta_note">// Respuesta en menos de 24hs</p>
         </div>
       </div>
     </section>
@@ -2207,7 +2215,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <p class="footer-logo">Qasa<span class="d">.</span><span class="l">studio</span></p>
-          <p class="footer-tagline">// Building your foundations</p>
+          <p class="footer-tagline" data-i18n="footer_tagline">// Building your foundations</p>
         </div>
         <nav class="footer-links" aria-label="Links de navegación del footer">
           <h3>Sitio</h3>
@@ -2238,10 +2246,138 @@
     </div>
   </footer>
 
+
+  <!-- ===== I18N ===== -->
+  <script>
+    const translations = {
+      es: {
+        nav_cta: 'Hablemos →',
+        nav_servicios: 'Servicios', nav_proceso: 'Proceso', nav_nosotros: 'Nosotros', nav_precios: 'Precios', nav_faq: 'FAQ',
+        hero_kicker: 'Qasa.studio',
+        hero_h1: 'Hacemos tu<br>página web.',
+        hero_sub: 'Contanos qué hace tu negocio. Nosotros nos encargamos de todo lo demás.',
+        hero_cta: 'Escribinos', hero_ghost: 'Ver servicios',
+        stat_entrega: 'Entrega garantizada', stat_pymes: 'PyMEs lanzadas', stat_anos: 'Años de industria',
+        sec_servicios_label: '01 — Servicios', sec_servicios_title: '¿Qué podemos hacer por tu negocio?',
+        svc1_name: 'Landing page', svc1_desc: 'Una página con un solo objetivo: que te contacten, que compren, que reserven. Ideal para empezar.', svc1_price: 'desde US$ 290',
+        svc2_name: 'Sitio web completo', svc2_desc: 'Tu negocio completo en internet. Quiénes son, qué hacen, cómo contratarlos.', svc2_price: 'desde US$ 590',
+        svc3_name: 'E-commerce', svc3_desc: 'Vendé tus productos las 24 horas. Nosotros configuramos todo para que solo tengas que subir lo que vendés.', svc3_price: 'desde US$ 990',
+        sec_proceso_label: '02 — Proceso', sec_proceso_title: 'Trabajamos para vos',
+        step1_title: 'Nos contás', step1_desc: 'Qué hace tu negocio, qué necesitás, qué te gusta y qué no. Sin formularios raros ni reuniones eternas.',
+        step2_title: 'Te mostramos cómo va a quedar', step2_desc: 'Antes de hacer cualquier cosa, te mandamos un boceto. Si algo no te gusta, lo cambiamos.',
+        step3_title: 'Lo construimos', step3_desc: 'Nos encargamos del diseño, el código y que ande bien en el celular.',
+        step4_title: 'Lo publicamos juntos', step4_desc: 'Te explicamos cómo funciona todo y quedamos disponibles por cualquier duda.',
+        sec_nosotros_label: '03 — Nosotros', sec_nosotros_title: 'Tu web en manos de alguien que sabe lo que hace.',
+        sec_nosotros_body: 'Tenemos años de experiencia trabajando en proyectos de tecnología a gran escala. Sabemos lo que funciona y lo que no.',
+        sec_nosotros_highlight: 'Cuando nos contratás, sabés que del otro lado hay alguien que ya hizo esto muchas veces.',
+        man1_title: '// Experiencia', man1_body: 'Trabajamos en proyectos de tecnología de gran escala durante años. Ese conocimiento está en cada web que hacemos.',
+        man2_title: '// Claridad', man2_body: 'Te explicamos todo en lenguaje simple. Nunca vas a sentir que no entendés de qué te estamos hablando.',
+        man3_title: '// Compromiso', man3_body: 'Estamos disponibles durante todo el proceso y después del lanzamiento. No desaparecemos cuando terminamos.',
+        sec_resultados_label: '04 — Resultados', sec_resultados_title: 'Webs que funcionan de verdad',
+        res1_title: '+180% consultas', res1_detail: 'Marina tenía una web que nadie encontraba. En 30 días de lanzada la nueva, triplicó las consultas por WhatsApp.',
+        res2_title: '3x ventas', res2_detail: 'Rodrigo vendía por Instagram. Cuando tuvo su tienda online, sus ventas se multiplicaron en dos meses.',
+        res3_title: '0.4 segundos', res3_detail: 'El tiempo que tarda en cargar una web nuestra. La mayoría de las webs tarda 8 veces más.',
+        sec_testi_label: '05 — Testimonios', sec_testi_title: 'Lo que dicen',
+        testi1: '“Me gustó muchísimo el diseño y principalmente que atendieron todas mis dudas. Yo no sé nada de esto y nunca me sentí perdida.”',
+        testi2: '“Pensé que iba a tardar meses y fue todo lo contrario. En dos semanas ya estaba vendiendo online.”',
+        testi3: '“Nunca me hablaron en idioma técnico. Les decía lo que quería y lo hacían.”',
+        sec_precios_label: '06 — Precios', sec_precios_title: '¿Cuánto cuesta?', sec_precios_body: 'Precio fijo desde el primer mensaje.',
+        badge_popular: 'MÁS POPULAR',
+        plan1_label: '// LANDING', plan1_desc: 'Una página lista para recibir clientes.',
+        plan2_label: '// SITIO WEB', plan2_desc: 'Tu negocio completo en internet.',
+        plan3_label: '// E-COMMERCE', plan3_desc: 'Vendé tus productos las 24 horas.',
+        sec_faq_label: '07 — FAQ', sec_faq_title: 'Preguntas frecuentes',
+        faq_q1: '¿Cuánto tarda?', faq_a1: 'Depende del proyecto. Una landing page la entregamos en 7 días. Un sitio web completo en unos 10. Una tienda online en 15.',
+        faq_q2: '¿Necesito saber algo de tecnología?', faq_a2: 'No. Nos contás qué necesitás y nosotros nos encargamos de todo.',
+        faq_q3: '¿Qué pasa si no me gusta cómo quedó?', faq_a3: 'Antes de arrancar te mostramos cómo va a quedar. Si algo no te convence, lo cambiamos.',
+        faq_q4: '¿Cómo es el pago?', faq_a4: 'La mitad al empezar, la otra mitad cuando entregamos.',
+        faq_q5: '¿Trabajan solo en Argentina?', faq_a5: 'No, trabajamos con clientes de cualquier país. Todo es remoto.',
+        cta_title: '¿Arrancamos?', cta_sub: 'Contanos qué necesitás y te respondemos el mismo día.',
+        cta_btn: 'Escribinos por WhatsApp', cta_note: '// Respuesta en menos de 24hs',
+        wap_bubble: '¿Necesitás una web?<br><strong>Escribinos →</strong>',
+        footer_tagline: '// Building your foundations',
+      },
+      en: {
+        nav_cta: "Let's talk →",
+        nav_servicios: 'Services', nav_proceso: 'Process', nav_nosotros: 'About', nav_precios: 'Pricing', nav_faq: 'FAQ',
+        hero_kicker: 'Qasa.studio',
+        hero_h1: 'We build your<br>website.',
+        hero_sub: 'Tell us about your business. We take care of everything else.',
+        hero_cta: 'Contact us', hero_ghost: 'See services',
+        stat_entrega: 'Delivery guaranteed', stat_pymes: 'Businesses launched', stat_anos: 'Years of experience',
+        sec_servicios_label: '01 — Services', sec_servicios_title: 'What can we do for your business?',
+        svc1_name: 'Landing page', svc1_desc: 'One page, one goal: get people to contact you, buy, or book. Perfect to start.', svc1_price: 'from US$ 290',
+        svc2_name: 'Full website', svc2_desc: 'Your complete business online. Who you are, what you do, how to hire you.', svc2_price: 'from US$ 590',
+        svc3_name: 'E-commerce', svc3_desc: 'Sell your products 24/7. We set everything up so you only need to add what you sell.', svc3_price: 'from US$ 990',
+        sec_proceso_label: '02 — Process', sec_proceso_title: 'We work for you',
+        step1_title: 'You tell us', step1_desc: "What your business does, what you need, what you like and what you don't. No weird forms or endless meetings.",
+        step2_title: 'We show you how it will look', step2_desc: "Before we do anything, we send you a mockup. If something doesn't feel right, we change it.",
+        step3_title: 'We build it', step3_desc: 'We handle the design, the code, and making sure it works on mobile.',
+        step4_title: 'We launch it together', step4_desc: 'We walk you through how everything works and stay available for any questions.',
+        sec_nosotros_label: '03 — About', sec_nosotros_title: 'Your website in experienced hands.',
+        sec_nosotros_body: "We have years of experience working on large-scale technology projects. We know what works and what doesn't.",
+        sec_nosotros_highlight: "When you hire us, you know there's someone on the other side who has done this many times before.",
+        man1_title: '// Experience', man1_body: 'We worked on large-scale technology projects for years. That knowledge goes into every website we build.',
+        man2_title: '// Clarity', man2_body: "We explain everything in plain language. You'll never feel lost or confused about what we're doing.",
+        man3_title: '// Commitment', man3_body: "We're available throughout the process and after launch. We don't disappear when we're done.",
+        sec_resultados_label: '04 — Results', sec_resultados_title: 'Websites that actually work',
+        res1_title: '+180% inquiries', res1_detail: 'Marina had a website nobody could find. Within 30 days of launching the new one, her WhatsApp inquiries tripled.',
+        res2_title: '3x sales', res2_detail: 'Rodrigo sold through Instagram. Once he had an online store, his sales multiplied in two months.',
+        res3_title: '0.4 seconds', res3_detail: "That's how fast our websites load. Most websites take 8 times longer.",
+        sec_testi_label: '05 — Testimonials', sec_testi_title: 'What they say',
+        testi1: '“I loved the design, but mainly that they answered every single question I had. I know nothing about this and I never felt lost.”',
+        testi2: '“I thought it would take months. It was the complete opposite. In two weeks I was already selling online.”',
+        testi3: '“They never talked to me in technical jargon. I told them what I wanted and they did it.”',
+        sec_precios_label: '06 — Pricing', sec_precios_title: 'How much does it cost?', sec_precios_body: 'Fixed price from the first message.',
+        badge_popular: 'MOST POPULAR',
+        plan1_label: '// LANDING', plan1_desc: 'One page ready to receive clients.',
+        plan2_label: '// WEBSITE', plan2_desc: 'Your complete business online.',
+        plan3_label: '// E-COMMERCE', plan3_desc: 'Sell your products 24/7.',
+        sec_faq_label: '07 — FAQ', sec_faq_title: 'Frequently asked questions',
+        faq_q1: 'How long does it take?', faq_a1: 'It depends on the project. A landing page takes 7 days. A full website around 10. An online store takes 15.',
+        faq_q2: 'Do I need to know anything about technology?', faq_a2: 'No. You tell us what you need and we take care of everything.',
+        faq_q3: "What if I don't like how it looks?", faq_a3: "Before we start, we show you exactly how it will look. If something doesn't work for you, we change it.",
+        faq_q4: 'How does payment work?', faq_a4: 'Half upfront, the other half when we deliver.',
+        faq_q5: 'Do you only work in Argentina?', faq_a5: 'No, we work with clients from any country. Everything is remote.',
+        cta_title: 'Ready to start?', cta_sub: "Tell us what you need and we'll get back to you the same day.",
+        cta_btn: 'Message us on WhatsApp', cta_note: '// We reply within 24 hours',
+        wap_bubble: 'Need a website?<br><strong>Message us →</strong>',
+        footer_tagline: '// Building your foundations',
+      }
+    };
+
+    let currentLang = 'es';
+
+    function applyLang(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.documentElement.lang = lang === 'es' ? 'es-AR' : 'en';
+      const btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'es' ? 'EN' : 'ES';
+      document.title = lang === 'es' ? 'Qasa.studio — Hacemos tu página web' : 'Qasa.studio — We build your website';
+      try { localStorage.setItem('qasa_lang', lang); } catch(e) {}
+    }
+
+    function toggleLang() { applyLang(currentLang === 'es' ? 'en' : 'es'); }
+
+    (function detectLang() {
+      try {
+        const saved = localStorage.getItem('qasa_lang');
+        if (saved) { applyLang(saved); return; }
+      } catch(e) {}
+      const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+      applyLang(browserLang.startsWith('es') ? 'es' : 'en');
+    })();
+  </script>
+
   <!-- ===== FLOATING WAP ===== -->
   <div id="wap-float">
     <div class="wap-bubble">
-      ¿Necesitás una web?<br><strong>Escribinos →</strong>
+      <span data-i18n="wap_bubble">¿Necesitás una web?<br><strong>Escribinos →</strong></span>
     </div>
     <a
       href="https://wa.me/541165796453?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20web"
